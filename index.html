@@ -1,171 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FÓRMULA UNO</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Escala para móviles -->
+  <title>FÓRMULA UNO</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="style.css" /> <!-- Archivo de estilos -->
+
   <script>
+    // Función que muestra solo la sección seleccionada y oculta las demás
     function mostrarSeccion(id) {
-      const secciones = document.querySelectorAll('.seccion');
-      secciones.forEach(sec => sec.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
+      const secciones = document.querySelectorAll('.seccion'); // Obtiene todas las secciones
+      secciones.forEach(sec => sec.style.display = 'none'); // Oculta todas
+      document.getElementById(id).style.display = 'block'; // Muestra solo la seleccionada
     }
   </script>
 </head>
-<body onload="mostrarSeccion('historia')">
+
+<body onload="mostrarSeccion('historia')"> <!-- Al cargar, muestra 'historia' -->
+
+  <!-- Título principal -->
   <h1>FÓRMULA UNO</h1>
+
+  <!-- Menú de navegación -->
   <nav>
     <ul>
       <li><a href="#" onclick="mostrarSeccion('historia')">Historia</a></li>
       <li><a href="#" onclick="mostrarSeccion('pilotos')">Pilotos</a></li>
     </ul>
   </nav>
+
+  <!-- Contenedor general -->
   <div class="contenedor-principal">
-    
     <div class="contenido">
 
-
-        <section id="historia" class="seccion">
+      <!-- Sección: Historia de la F1 -->
+      <section id="historia" class="seccion">
         <h2>Historia de la Fórmula 1</h2>
 
+        <!-- Décadas 1950–1970 -->
         <div class="historia-bloque">
-            <div class="historia-texto">
+          <div class="historia-texto">
             <h3>Los Inicios (1950–1970)</h3>
-            <p>La Fórmula 1 nació oficialmente en 1950 con el Gran Premio de Gran Bretaña en Silverstone. Durante estas dos décadas, la categoría se caracterizó por la valentía de los pilotos y la evolución constante de los monoplazas. Figuras legendarias como Juan Manuel Fangio y Jim Clark dominaron las pistas, estableciendo récords y dejando una huella imborrable en la historia del automovilismo.</p>
+            <p>La Fórmula 1 nació oficialmente en 1950 con el Gran Premio de Gran Bretaña. Pilotos legendarios como Juan Manuel Fangio y Jim Clark se destacaron en una época de grandes riesgos y avances tecnológicos iniciales.</p>
+          </div>
+          <div class="historia-imagen">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA35X0QZN4q6N7g3B0-y8dcwLlG3vkvNYjog&s" alt="Fórmula1 años 50">
+          </div>
         </div>
-        <div class="historia-imagen">
-            <img src="img/1950.jpg" alt="Fórmula1enlosaños50">
-        </div>
-    </div>
 
-    <div class="historia-texto">
-        <h3>La Era Dorada (1970–1990)</h3>
-            <p>En estas décadas, la Fórmula 1 vivió una de sus etapas más emocionantes. Pilotos como Niki Lauda, James Hunt y Ayrton Senna protagonizaron duelos épicos. La tecnología avanzó rápidamente, introduciendo mejoras en la aerodinámica y la seguridad de los vehículos. Las carreras se volvieron más competitivas y el deporte ganó una enorme popularidad a nivel mundial.</p>
-        </div>
+        <!-- Décadas 1970–1990 -->
         <div class="historia-bloque inverso">
-        <div class="historia-imagen">
-        <img src="img/1970.jpg" alt="Fórmula1enlosaños70">
+          <div class="historia-texto">
+            <h3>La Era Dorada (1970–1990)</h3>
+            <p>Pilotos como Niki Lauda, James Hunt y Ayrton Senna protagonizaron duelos inolvidables. La tecnología avanzó rápidamente, aumentando la emoción y competitividad.</p>
+          </div>
+          <div class="historia-imagen">
+            <img src="data:image/jpeg;base64,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" alt="Fórmula1 años 70-90">
+          </div>
         </div>
-    </div>
 
-  <div class="historia-bloque">
-    <div class="historia-texto">
-      <h3>Dominio y Tecnología (1990–2010)</h3>
-      <p>Michael Schumacher y Ferrari marcaron una era de dominio absoluto en la Fórmula 1. La introducción de la electrónica y la telemetría revolucionaron la forma en que los equipos analizaban el rendimiento. Además, se implementaron medidas de seguridad más estrictas, protegiendo a los pilotos y mejorando la infraestructura de los circuitos.</p>
-    </div>
-    <div class="historia-imagen">
-      <img src="img/2010.jpg" alt="Fórmula1enlosaños2000">
-    </div>
-  </div>
+        <!-- Décadas 1990–2010 -->
+        <div class="historia-bloque">
+          <div class="historia-texto">
+            <h3>Dominio y Tecnología (1990–2010)</h3>
+            <p>Michael Schumacher dominó esta era con Ferrari. La electrónica y la telemetría cambiaron la forma en que los equipos competían. También se mejoraron significativamente las medidas de seguridad.</p>
+          </div>
+          <div class="historia-imagen">
+            <img src="https://www.f1latam.com/img/prin/grid01.jpg" alt="Fórmula1 años 2000">
+          </div>
+        </div>
 
-    <div class="historia-texto">
-      <h3>La Nueva Era (2010–2025)</h3>
-            <p>La Fórmula 1 ha entrado en una nueva era con la introducción de motores híbridos y un enfoque en la sostenibilidad. Pilotos como Lewis Hamilton y Max Verstappen han llevado el deporte a nuevas alturas, combinando talento con tecnología de punta. La categoría continúa evolucionando, adaptándose a los desafíos del siglo XXI y manteniendo su estatus como el pináculo del automovilismo.</p>
-             </div>
-               <div class="historia-bloque inverso">
-    <div class="historia-imagen">
-      <img src="img/2025.jpg" alt="Fórmula 1 en los años 2020">
-    </div>
-            </div>
-        </section>
+        <!-- 2010 a la actualidad -->
+        <div class="historia-bloque inverso">
+          <div class="historia-texto">
+            <h3>La Nueva Era (2010–2025)</h3>
+            <p>Con motores híbridos y enfoque en sostenibilidad, F1 evoluciona. Hamilton y Verstappen destacan en esta época de innovación y competencia global.</p>
+          </div>
+          <div class="historia-imagen">
+            <img src="data:image/jpeg;base64,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" alt="Fórmula1 actual">
+          </div>
+        </div>
+      </section>
 
+      <!-- Sección: Pilotos Famosos -->
       <section id="pilotos" class="seccion">
-  <h2>Pilotos Famosos de la Fórmula 1 (2025)</h2>
+        <h2>Pilotos Famosos de la Fórmula 1 (2025)</h2>
 
-  <!-- Oscar Piastri -->
-  <div class="historia-bloque">
-    <div class="historia-texto">
-      <h3>Oscar Piastri</h3>
-      <p><strong>Equipo:</strong> McLaren</p>
-      <p><strong>Campeonatos:</strong> 0</p>
-      <p><strong>Logros:</strong> Líder del campeonato 2025 con 4 victorias y 7 podios en las primeras 8 carreras.</p>
-      <p><strong>Historia:</strong> Debutó en F1 en 2023. En 2024, ayudó a McLaren a ganar su primer título de constructores desde 1998. En 2025, ha emergido como un contendiente al título, superando a su compañero Lando Norris en puntos.</p>
-      <p><strong>Curiosidad:</strong> Ganó los campeonatos de F3 y F2 en temporadas consecutivas antes de llegar a la F1.</p>
-    </div>
-    <div class="historia-imagen">
-      <img src="img/Oscar.jpg" alt="Oscar Piastri">
+        <!-- Oscar Piastri -->
+        <div class="historia-bloque">
+          <div class="historia-texto">
+            <h3>Oscar Piastri</h3>
+            <p><strong>Equipo:</strong> McLaren</p>
+            <p><strong>Campeonatos:</strong> 0</p>
+            <p><strong>Logros:</strong> Líder del campeonato 2025 con varias victorias.</p>
+            <p><strong>Curiosidad:</strong> Campeón en F3 y F2 en años consecutivos.</p>
+          </div>
+          <div class="historia-imagen">
+            <img src="https://www.autohebdo.fr/app/uploads/2022/06/DPPI_00124024_667.jpg" alt="Oscar Piastri">
+          </div>
+        </div>
+
+        <!-- Lando Norris -->
+        <div class="historia-bloque inverso">
+          <div class="historia-texto">
+            <h3>Lando Norris</h3>
+            <p><strong>Equipo:</strong> McLaren</p>
+            <p><strong>Campeonatos:</strong> 0</p>
+            <p><strong>Logros:</strong> Varias victorias y podios hasta 2025.</p>
+            <p><strong>Curiosidad:</strong> Muy activo en redes sociales.</p>
+          </div>
+          <div class="historia-imagen">
+            <img src="data:image/jpeg;base64,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" alt="Lando Norris">
+          </div>
+        </div>
+
+        <!-- Max Verstappen -->
+        <div class="historia-bloque">
+          <div class="historia-texto">
+            <h3>Max Verstappen</h3>
+            <p><strong>Equipo:</strong> Red Bull Racing</p>
+            <p><strong>Campeonatos:</strong> 4 (2021–2024)</p>
+            <p><strong>Curiosidad:</strong> Piloto más joven en ganar una carrera.</p>
+          </div>
+          <div class="historia-imagen">
+            <img src="https://gpticketstore.vshcdn.net/uploads/images/12172/teams-lineups-f1-max-verstapen.jpg" alt="Max Verstappen">
+          </div>
+        </div>
+
+        <!-- Lewis Hamilton -->
+        <div class="historia-bloque inverso">
+          <div class="historia-texto">
+            <h3>Lewis Hamilton</h3>
+            <p><strong>Equipo:</strong> Ferrari</p>
+            <p><strong>Campeonatos:</strong> 7</p>
+            <p><strong>Logros:</strong> Récord de victorias, poles y podios.</p>
+          </div>
+          <div class="historia-imagen">
+            <img src="https://storage.googleapis.com/static.elsoldemexico.com.mx/elesto/2025/03/Lewis-Hamilton-ya-quiere-que-inicie-la-temporada-de-la-F1-Foto_-Reuters-770x450.png" alt="Lewis Hamilton">
+          </div>
+        </div>
+
+        <!-- Charles Leclerc -->
+        <div class="historia-bloque">
+          <div class="historia-texto">
+            <h3>Charles Leclerc</h3>
+            <p><strong>Equipo:</strong> Ferrari</p>
+            <p><strong>Campeonatos:</strong> 0</p>
+            <p><strong>Curiosidad:</strong> Primer monegasco ganador desde 1931.</p>
+          </div>
+          <div class="historia-imagen">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6MujaWuS8RjdQsSbPDwWzgw43-gdNHN7ULw&s" alt="Charles Leclerc">
+          </div>
+        </div>
+
+        <!-- George Russell -->
+        <div class="historia-bloque inverso">
+          <div class="historia-texto">
+            <h3>George Russell</h3>
+            <p><strong>Equipo:</strong> Mercedes</p>
+            <p><strong>Curiosidad:</strong> Ganador de F2 y GP3 consecutivos.</p>
+          </div>
+          <div class="historia-imagen">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiGp4Go8qrpHxeZ2WE-OwU3G7qpuoDdh7UH2_TM1pwv1RcIJj9KZE27JQjg_zwZMA4YCY&usqp=CAU" alt="George Russell">
+          </div>
+        </div>
+
+      </section>
     </div>
   </div>
 
-  <!-- Lando Norris -->
-  <div class="historia-bloque inverso">
-    <div class="historia-texto">
-      <h3>Lando Norris</h3>
-      <p><strong>Equipo:</strong> McLaren</p>
-      <p><strong>Campeonatos:</strong> 0</p>
-      <p><strong>Logros:</strong> 6 victorias, 33 podios y 11 poles hasta mayo de 2025.</p>
-      <p><strong>Historia:</strong> Debutó en F1 en 2019. En 2024, fue subcampeón del mundo, contribuyendo al título de constructores de McLaren. En 2025, ha ganado en Australia y Mónaco, manteniéndose en la lucha por el campeonato.</p>
-      <p><strong>Curiosidad:</strong> Es conocido por su presencia en redes sociales y transmisiones en Twitch, conectando con una audiencia joven.</p>
-    </div>
-        <div class="historia-imagen">
-      <img src="img/Norriz.jpg" alt="Lando Norris">
-    </div>
-  </div>
-
-  <!-- Max Verstappen -->
-  <div class="historia-bloque">
-    <div class="historia-texto">
-      <h3>Max Verstappen</h3>
-      <p><strong>Equipo:</strong> Red Bull Racing</p>
-      <p><strong>Campeonatos:</strong> 4 (2021–2024)</p>
-      <p><strong>Logros:</strong> 65 victorias, 116 podios y múltiples récords, incluyendo más victorias en una temporada (19).</p>
-      <p><strong>Historia:</strong> Debutó en F1 en 2015. Dominó la categoría con Red Bull entre 2021 y 2024. En 2025, enfrenta una competencia más reñida con los pilotos de McLaren.</p>
-      <p><strong>Curiosidad:</strong> Es el piloto más joven en ganar un Gran Premio, logrando la victoria en España 2016 con solo 18 años.</p>
-    </div>
-    <div class="historia-imagen">
-      <img src="img/Max.jpg" alt="Max Verstappen">
-    </div>
-  </div>
-
-  <!-- Lewis Hamilton -->
-  <div class="historia-bloque inverso">
-    <div class="historia-texto">
-      <h3>Lewis Hamilton</h3>
-      <p><strong>Equipo:</strong> Ferrari</p>
-      <p><strong>Campeonatos:</strong> 7 (2008, 2014–2015, 2017–2020)</p>
-      <p><strong>Logros:</strong> 103 victorias, 104 poles y 202 podios, récords históricos en la F1.</p>
-      <p><strong>Historia:</strong> Debutó en F1 en 2007. Tras una exitosa etapa con Mercedes, se unió a Ferrari en 2025 buscando su octavo título mundial.</p>
-      <p><strong>Curiosidad:</strong> Es un activista destacado por la diversidad y la sostenibilidad en el deporte.</p>
-    </div>
-    <div class="historia-imagen">
-      <img src="img/Hamilton.jpg" alt="Lewis Hamilton">
-    </div>
-  </div>
-
-  <!-- Charles Leclerc -->
-  <div class="historia-bloque">
-    <div class="historia-texto">
-      <h3>Charles Leclerc</h3>
-      <p><strong>Equipo:</strong> Ferrari</p>
-      <p><strong>Campeonatos:</strong> 0</p>
-      <p><strong>Logros:</strong> 5 victorias, 30 podios y 23 poles hasta 2025.</p>
-      <p><strong>Historia:</strong> Debutó en F1 en 2018. En 2024, logró una emotiva victoria en su carrera de casa en Mónaco. En 2025, continúa siendo el principal contendiente de Ferrari.</p>
-      <p><strong>Curiosidad:</strong> Es el primer piloto monegasco en ganar un Gran Premio desde Louis Chiron en 1931.</p>
-    </div>
-    <div class="historia-imagen">
-      <img src="img/Leclerc.jpg" alt="Charles Leclerc">
-    </div>
-  </div>
-
-  <!-- George Russell -->
-  <div class="historia-bloque inverso">
-    <div class="historia-texto">
-      <h3>George Russell</h3>
-      <p><strong>Equipo:</strong> Mercedes</p>
-      <p><strong>Campeonatos:</strong> 0</p>
-      <p><strong>Logros:</strong> 1 victoria, múltiples podios y poles desde su debut.</p>
-      <p><strong>Historia:</strong> Debutó en F1 en 2019 con Williams. Se unió a Mercedes en 2022, donde ha mostrado consistencia y velocidad, consolidándose como líder del equipo.</p>
-      <p><strong>Curiosidad:</strong> Ganó los campeonatos de GP3 y F2 en temporadas consecutivas antes de llegar a la F1.</p>
-    </div>
-    <div class="historia-imagen">
-      <img src="img/Russell.jpg" alt="George Russell">
-    </div>
-  </div>
-
-  </div>
+  <!-- Pie de página -->
   <footer>
-    Proyecto creado por Felipe Eduardo Cush Temaj - Universidad Mariano Galvez  
+    Proyecto creado por Felipe Eduardo Cush Temaj - Universidad Mariano Gálvez
   </footer>
 
 </body>
